@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamFormsMobileApp.NotesDetailPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout  Margin="20">
+                <Button Text="Convert To Image" BackgroundColor="Red" CornerRadius="10"
+                        TextColor="White" Command="{Binding NavigateCommand}"></Button>
+                <Label Text="{Binding Notes}" TextColor="{Binding SelectedTextColor,Converter={StaticResource StringToColorConverter}}"
+                   FontSize="Medium"/>
+            </StackLayout>
+           
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
